@@ -10,7 +10,7 @@ import lombok.Setter;
  * Created by bowenwang on 2017/6/1.
  */
 
-public class SigInData {
+public class SignInData {
 
     @Getter
     @Setter

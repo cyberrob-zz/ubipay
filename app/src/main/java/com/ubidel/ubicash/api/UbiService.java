@@ -12,11 +12,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class UbiService {
 
-    private ApiEndPoints apiService;
     private static HttpLoggingInterceptor logging;
     private static OkHttpClient okHttpClient;
 
-    public UbiService() {
+    public static ApiEndPoints getEndPoints() {
         final Gson gson = new GsonBuilder()
 //                .registerTypeAdapter(AirQuality.class, new JsonDeserializer<AirQuality>() {
 //                    @Override
@@ -37,7 +36,7 @@ public class UbiService {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(getOkHttpClient())
                 .build();
-        apiService = retrofit.create(ApiEndPoints.class);
+        return retrofit.create(ApiEndPoints.class);
     }
 
     private static OkHttpClient getOkHttpClient() {

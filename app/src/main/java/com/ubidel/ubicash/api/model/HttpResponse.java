@@ -16,7 +16,7 @@ public class HttpResponse {
     @Setter
     @SerializedName("status")
     @Expose
-    public String status;
+    public Boolean status;
 
     @Getter
     @Setter
