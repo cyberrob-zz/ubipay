@@ -45,4 +45,12 @@ ext {
 
     play = '9.8.0'
 
+    retrofitVersion = '2.3.0'
+    OK_HTTP_VERSION = '3.8.0'
+
+    retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    converter_gson = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    adapter_rxjava = "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+    logging_interceptor = "com.squareup.okhttp3:logging-interceptor:$OK_HTTP_VERSION"
+    okhttp = "com.squareup.okhttp3:okhttp:$OK_HTTP_VERSION"
 }
