@@ -11,12 +11,12 @@ import com.ubidel.ubicash.api.model.UserDetails;
 
 import java.util.List;
 
+import io.reactivex.Observable;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
-import rx.Observable;
 
 /**
  * Created by Tiny on 3/25/16.

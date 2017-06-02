@@ -50,7 +50,7 @@ ext {
 
     retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
     converter_gson = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    adapter_rxjava = "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+    adapter_rxjava = "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
     logging_interceptor = "com.squareup.okhttp3:logging-interceptor:$OK_HTTP_VERSION"
     okhttp = "com.squareup.okhttp3:okhttp:$OK_HTTP_VERSION"
 }
