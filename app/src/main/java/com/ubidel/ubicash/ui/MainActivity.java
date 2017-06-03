@@ -1,6 +1,7 @@
 package com.ubidel.ubicash.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
@@ -17,7 +18,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.ubidel.ubicash.R;
+import com.ubidel.ubicash.ui.auth.LandingActivity;
 import com.ubidel.ubicash.ui.mvp.BaseActivity;
+import com.ubidel.ubicash.util.PrefUtils;
 
 import butterknife.BindView;
 
@@ -130,7 +133,21 @@ public class MainActivity extends BaseActivity<MainView, MainPresenter>
 
     @Override
     public void showLogoutView() {
-        sectionText.setText("LOGOUT");
+        getPresenter().clearCredential();
+        redirectToSignInView();
+    }
+
+    @Override
+    public void redirectToSignInView() {
+        Intent intent = new Intent(MainActivity.this, LandingActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public void shownAsSignIn() {
+        sectionText.setText("Hi!" + PrefUtils.getUserDetails(this).getLastName().toString());
     }
 
     @Override

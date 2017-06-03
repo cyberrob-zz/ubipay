@@ -30,7 +30,7 @@ public class UserDetails {
     @Setter
     @SerializedName("phone")
     @Expose
-    public Integer phone;
+    public Double phone;
     @Getter
     @Setter
     @SerializedName("verified")

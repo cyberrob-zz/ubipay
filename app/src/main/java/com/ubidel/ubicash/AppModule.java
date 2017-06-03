@@ -36,9 +36,4 @@ public class AppModule {
         return new UbiService();
     }
 
-    @Provides
-    @Singleton
-    PrefUtils providesPrefUtils() {
-        return new PrefUtils();
-    }
 }

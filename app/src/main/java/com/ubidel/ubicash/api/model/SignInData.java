@@ -16,7 +16,7 @@ public class SignInData {
     @Setter
     @SerializedName("phone")
     @Expose
-    public Integer phone;
+    public String phone;
 
     @Getter
     @Setter

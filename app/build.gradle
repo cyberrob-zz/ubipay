@@ -46,13 +46,13 @@ android {
         }
     }
     productFlavors {
-        development {
+        dev {
             minSdkVersion 21
             resConfigs("en", "xxhdpi")
 
         }
 
-        production {
+        prod {
             minSdkVersion 16
         }
     }

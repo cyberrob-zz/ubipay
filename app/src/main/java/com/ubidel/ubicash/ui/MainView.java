@@ -15,4 +15,8 @@ public interface MainView extends BaseView {
     void showCashOutLocationView();
 
     void showLogoutView();
+
+    void redirectToSignInView();
+
+    void shownAsSignIn();
 }

@@ -1,6 +1,7 @@
 package com.ubidel.ubicash;
 
 import com.ubidel.ubicash.api.UbiService;
+import com.ubidel.ubicash.ui.MainPresenter;
 import com.ubidel.ubicash.util.PrefUtils;
 
 import javax.inject.Singleton;
@@ -19,5 +20,5 @@ public interface AppComponent {
 
     void inject(UbiService ubiService);
 
-    void inject(PrefUtils prefUtils);
+
 }
