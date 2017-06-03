@@ -13,4 +13,8 @@ public class MainPresenter extends BasePresenter<MainView> {
     public MainPresenter(Context context) {
         super(context);
     }
+
+    public void checkAccount() {
+
+    }
 }

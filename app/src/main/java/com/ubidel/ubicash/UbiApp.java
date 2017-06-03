@@ -12,10 +12,15 @@ import io.fabric.sdk.android.Fabric;
 
 public class UbiApp extends Application {
 
+    private AppComponent appComponent;
+
     @Override
     public void onCreate() {
         super.onCreate();
 
         Fabric.with(this, new Crashlytics());
+
+        appComponent = DaggerAppComponent.builder().appModule(new AppModule(this)).build();
+        appComponent.inject(this);
     }
 }

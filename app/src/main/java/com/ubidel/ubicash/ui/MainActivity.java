@@ -35,6 +35,8 @@ public class MainActivity extends BaseActivity<MainView, MainPresenter>
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getPresenter().checkAccount();
+
         setSupportActionBar(toolbar);
 
         fab.setOnClickListener(new View.OnClickListener() {
